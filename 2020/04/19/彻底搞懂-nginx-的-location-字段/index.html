@@ -16,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>所有分类 - Hexo</title>
+    <title>彻底搞懂 nginx 的 location 字段 - Hexo</title>
   
+    <meta name="keywords" content="nginx">
+  
+  
+    <meta name="description" content="彻底搞懂 nginx 的 location 字段">
   
 
   <!-- feed -->
@@ -326,44 +330,356 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      <section class="post-list ">
-        <div class='post-wrapper'>
-          <article id="archive-page" class="post article white-box shadow">
-            <section class="archive">
-              <div class="archive-item archive-year mark">
-                <h2>所有分类</h2>
-              </div>
-              <div class="archive-item archive-post mark all-categories">
-                
-                  
-                    <a class="" href="/categories/Java/">
-                      <time><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;Java</time>
-                      <span class="title">
-                        (1)
-                      </span>
-                    </a>
-                  
-                    <a class="" href="/categories/Linux/">
-                      <time><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;Linux</time>
-                      <span class="title">
-                        (2)
-                      </span>
-                    </a>
-                  
-                
-              </div>
-              <br>
-              
-            </section>
-          </article>
-        </div>
-      </section>
-    
+
   
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/">
+        彻底搞懂 nginx 的 location 字段
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://xaoxuu.com" target="_blank" rel="nofollow noopener">
+    <img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/avatar/avatar.jpeg">
+    <p>QianXiao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/Linux/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>Linux</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Apr 19, 2020</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>395 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>1 min</p>
+    </a>
+  </div>
+
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>彻底搞懂 nginx 的 location 字段</p>
+<a id="more"></a>
+
+<h2 id="前缀符号"><a href="#前缀符号" class="headerlink" title="前缀符号"></a>前缀符号</h2><ul>
+<li><code>=</code>：对<code>URI</code>和<code>location</code>进行精确匹配，如果找到精确匹配，那么匹配便会终止</li>
+<li><code>~</code>：正则匹配，区分大小写</li>
+<li><code>~*</code>：正则匹配，不区分大小写</li>
+<li><code>^~</code>：当最长前缀匹配中包含该字符时，则不会匹配正则表达式</li>
+<li><code>@</code>：不是用来处理常规请求，而是被用来请求重定向</li>
+</ul>
+<h2 id="匹配顺序"><a href="#匹配顺序" class="headerlink" title="匹配顺序"></a>匹配顺序</h2><p>1、<code>nginx</code>会匹配那些定义了<em>prefix string<em>的<code>location</code>，能够完成*</em>最长*<em>匹配</em>prefix string</em></p>
+<p>的<code>location</code>会被nginx记录</p>
+<p>2、按照 <em>regular expressions*在配置文件出现的顺序进行匹配，找到了第一个匹配的 *regular expressions</em> ，那么<code>nginx</code>便停止匹配。如果没有找到与之相匹配的 <em>regular expressions</em>，<code>nginx</code>将会使用之前被记录下来的最长匹配<em>prefix string</em>的<code>location</code></p>
+<p>3、如果最长匹配<em>prefix string</em>的<code>location</code>中有 <code>^~</code> ，那么<code>nginx</code>将不会进行<em>regular expressions</em>匹配</p>
+<p>4、同理最长匹配<em>prefix string</em>的<code>location</code>中有 <code>=</code> ，<code>nginx</code>会对<code>URI</code>和<code>location</code>进行精确匹配，如果<code>nginx</code>找到了精确匹配，那么匹配将会终止</p>
+<p>5、如果<code>location</code>的<em>prefix string</em>是以<code>/</code>结尾，那么请求可以进行特殊的处理（<code>proxy_pass</code>、<code>fastcgi_pass</code>，<code>uwsgi_pass</code>，<code>scgi_pass</code>、<code>memcached_pass</code>、<code>grpc_pass</code>）。</p>
+<p>6、如果<code>步骤5</code>中<code>location</code>的<code>prefix string</code>同时存在<code>/</code>结尾和不带<code>/</code>结尾的，那么不带<code>/</code>结尾的将会永久的被以<code>301</code>状态码的方式重定向到<code>/</code>结尾的<code>location</code>中。如果对这种情况不是很满意的话，可以使用精确匹配的方式解决该问题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">location /user/ &#123;</span><br><span class="line">    proxy_pass http://user.example.com;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location = /user &#123;</span><br><span class="line">    proxy_pass http://login.example.com;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+            <br>
+            
+              
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://qianxiaoxinrou.github.io/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/>https://qianxiaoxinrou.github.io/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-19T08:43:58+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 19, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nginx/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>nginx</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://qianxiaoxinrou.github.io/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/&title=彻底搞懂 nginx 的 location 字段 - Hexo&summary=彻底搞懂 nginx 的 location 字段"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://qianxiaoxinrou.github.io/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/&title=彻底搞懂 nginx 的 location 字段 - Hexo&summary=彻底搞懂 nginx 的 location 字段"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://qianxiaoxinrou.github.io/2020/04/19/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82-nginx-%E7%9A%84-location-%E5%AD%97%E6%AE%B5/&title=彻底搞懂 nginx 的 location 字段 - Hexo&summary=彻底搞懂 nginx 的 location 字段"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>395 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>1 min</p>
+    </a>
+  </div>
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/04/18/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/'>
+                <p class='title'>docker 学习笔记 | 持续更新~~~<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>列出了docker常见的命令，及一些个人总结的知识点
+
+
+镜像命令
+查看本地镜像
+
+1docker images
+
+
+-a：显示所有镜像
+
+-q：显示镜像id
+
+
+
+查找
+
+在dockerhub...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '彻底搞懂 nginx 的 location 字段',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class='l_side'>
@@ -374,6 +690,20 @@
     
     
 
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前缀符号"><span class="toc-text">前缀符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匹配顺序"><span class="toc-text">匹配顺序</span></a></li></ol>
+    </div>
+  </section>
 
 
   
