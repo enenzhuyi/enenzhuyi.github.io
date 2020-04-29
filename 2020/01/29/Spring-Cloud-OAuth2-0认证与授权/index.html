@@ -441,19 +441,19 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:5000&#x2F;uaa&#x2F;oauth&#x2F;authorize?response_type&#x3D;code&amp;client_id&#x3D;c1&amp;redirect_uri&#x3D;https:&#x2F;&#x2F;www.ririiy.com&amp;scope&#x3D;all&amp;state&#x3D;1</span><br></pre></td></tr></table></figure>
 
-<h4 id="第二步：用户同意授权"><a href="#第二步：用户同意授权" class="headerlink" title="第二步：用户同意授权"></a>第二步：用户同意授权</h4><p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%881.48.25.png" alt=""></p>
+<h4 id="第二步：用户同意授权"><a href="#第二步：用户同意授权" class="headerlink" title="第二步：用户同意授权"></a>第二步：用户同意授权</h4><p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%881.48.25.png" alt=""></p>
 <h4 id="第三步：客户端通过授权码获取令牌"><a href="#第三步：客户端通过授权码获取令牌" class="headerlink" title="第三步：客户端通过授权码获取令牌"></a>第三步：客户端通过授权码获取令牌</h4><p>第三步本是一次请求，这里为了针对性才将此拆开</p>
 <h5 id="1）设置客户端身份"><a href="#1）设置客户端身份" class="headerlink" title="1）设置客户端身份"></a>1）设置客户端身份</h5><ul>
 <li>client_id：表示客户端ID，必选项。</li>
 <li>client_secret：表示客户端密钥，必选项</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
 <h5 id="2）获取令牌"><a href="#2）获取令牌" class="headerlink" title="2）获取令牌"></a>2）获取令牌</h5><ul>
 <li>grant_type：表示使用的授权模式，必选项，此处的值固定为”authorization_code”。</li>
 <li>code：表示上一步获得的授权码，必选项。</li>
 <li>redirect_uri：表示重定向URI，必选项，且必须与A步骤中的该参数值保持一致。</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%881.57.21.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%881.57.21.png" alt=""></p>
 <p>令牌参数说明：</p>
 <ul>
 <li>access_token：表示访问令牌，必选项。</li>
@@ -468,28 +468,28 @@
 <li>client_id：表示客户端ID，必选项。</li>
 <li>client_secret：表示客户端密钥，必选项</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
 <h5 id="2）获取令牌-1"><a href="#2）获取令牌-1" class="headerlink" title="2）获取令牌"></a>2）获取令牌</h5><ul>
 <li>grant_type：表示授权类型，此处的值固定为”password”，必选项。</li>
 <li>username：表示用户名，必选项。</li>
 <li>password：表示用户的密码，必选项。</li>
 <li>scope：表示权限范围，可选项。</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.12.27.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.12.27.png" alt=""></p>
 <h3 id="client-credentials：客户端模式"><a href="#client-credentials：客户端模式" class="headerlink" title="client_credentials：客户端模式"></a>client_credentials：客户端模式</h3><h4 id="第一步：设置客户端身份"><a href="#第一步：设置客户端身份" class="headerlink" title="第一步：设置客户端身份"></a>第一步：设置客户端身份</h4><ul>
 <li>client_id：表示客户端ID，必选项。</li>
 <li>client_secret：表示客户端密钥，必选项</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8A%E5%8D%8811.59.39.png" alt=""></p>
 <h4 id="第二步：获取令牌"><a href="#第二步：获取令牌" class="headerlink" title="第二步：获取令牌"></a>第二步：获取令牌</h4><ul>
 <li>grant_type：表示授权类型，此处的值固定为”client_credentials”，必选项。</li>
 <li>scope：表示权限范围，可选项。</li>
 </ul>
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.18.10.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.18.10.png" alt=""></p>
 <h3 id="implicit：简化模式"><a href="#implicit：简化模式" class="headerlink" title="implicit：简化模式"></a>implicit：简化模式</h3><p>简化模式为授权码模式的简化版。即，授权码模式的第一步直接通过浏览器回显令牌</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:5000&#x2F;uaa&#x2F;oauth&#x2F;authorize?response_type&#x3D;token&amp;client_id&#x3D;c1&amp;redirect_uri&#x3D;https:&#x2F;&#x2F;www.ririiy.com&amp;scope&#x3D;all</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.21.47.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%882.21.47.png" alt=""></p>
 <h2 id="Spring-Cloud-OAuth2认证和授权项目"><a href="#Spring-Cloud-OAuth2认证和授权项目" class="headerlink" title="Spring Cloud OAuth2认证和授权项目"></a>Spring Cloud OAuth2认证和授权项目</h2><p>在父工程引入Spring Boot和Spring Cloud的相关依赖</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Inherit defaults from Spring Boot --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>Hoxton.SR1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -498,7 +498,7 @@
 <h4 id="配置文件-application-yml"><a href="#配置文件-application-yml" class="headerlink" title="配置文件 application.yml"></a>配置文件 application.yml</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">context-path:</span> <span class="string">/uaa</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">distributed-security-uaa</span></span><br><span class="line">  <span class="attr">security:</span></span><br><span class="line">    <span class="attr">user:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">user</span></span><br><span class="line">      <span class="attr">password:</span> <span class="number">123</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">serviceUrl:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:3000/eureka/</span></span><br><span class="line"><span class="attr">security:</span></span><br><span class="line">  <span class="attr">oauth2:</span></span><br><span class="line">    <span class="attr">client:</span></span><br><span class="line">      <span class="attr">client-id:</span> <span class="string">c1</span></span><br><span class="line">      <span class="attr">client-secret:</span> <span class="number">123</span></span><br><span class="line">      <span class="comment"># 回调URL</span></span><br><span class="line">      <span class="attr">registered-redirect-uri:</span> <span class="string">https://www.ririiy.com</span></span><br><span class="line">      <span class="comment"># 令牌有效时间</span></span><br><span class="line">      <span class="attr">access-token-validity-seconds:</span> <span class="number">7200</span>  <span class="comment"># 两小时</span></span><br><span class="line">      <span class="comment"># 令牌刷新时间</span></span><br><span class="line">      <span class="attr">refresh-token-validity-seconds:</span> <span class="number">259200</span>  <span class="comment"># 三天</span></span><br><span class="line">      <span class="attr">resource-ids:</span> <span class="string">r1</span></span><br><span class="line">    <span class="attr">authorization:</span></span><br><span class="line">      <span class="comment"># 放行check_token请求，便于检查access_token即令牌是否合法</span></span><br><span class="line">      <span class="attr">check-token-access:</span> <span class="string">permitAll()</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="开启Spring-Security"><a href="#开启Spring-Security" class="headerlink" title="开启Spring Security"></a>开启Spring Security</h4><p>如果不开启Spring Security的话，则会有相关提示</p>
-<p><img src="Spring-Cloud-OAuth2-0%E8%AE%A4%E8%AF%81%E4%B8%8E%E6%8E%88%E6%9D%83/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%884.16.12.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-01-31%E4%B8%8B%E5%8D%884.16.12.png" alt=""></p>
 <p>创建Spring Security配置类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -609,10 +609,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-19T08:44:46+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-30T07:13:22+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 19, 2020</p>
+    <p>更新于：Apr 30, 2020</p>
   </a>
 </div>
 

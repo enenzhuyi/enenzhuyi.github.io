@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.2'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>Spring面试题 - Hexo</title>
+  
+    <meta name="keywords" content="Java,Spring面试">
+  
+  
+    <meta name="description" content="总结常见Spring面试题">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            VOLANTIS <b><sup style='color:#3AA757'>2.6.2</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  
+    <h1 class="title">
+      <a href="/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/">
+        Spring面试题
+      </a>
+    </h1>
+  
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://xaoxuu.com" target="_blank" rel="nofollow noopener">
+    <img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/avatar.jpeg">
+    <p>QianXiao</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E9%9D%A2%E8%AF%95/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>面试</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Apr 29, 2020</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>3.3k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>11 min</p>
+    </a>
+  </div>
+
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>总结常见Spring面试题</p>
+<a id="more"></a>
+
+<h2 id="Spring中Bean作用域？"><a href="#Spring中Bean作用域？" class="headerlink" title="Spring中Bean作用域？"></a>Spring中Bean作用域？</h2><ul>
+<li><p>singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。</p>
+</li>
+<li><p>prototype : 每次请求都会创建一个新的 bean 实例。</p>
+</li>
+<li><p>request : 每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。</p>
+</li>
+<li><p>session : 每一次HTTP请求都会产生一个新的 bean，该bean仅在当前 HTTP session 内有效。</p>
+</li>
+<li><p>global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有不同的会话</p>
+</li>
+</ul>
+<h2 id="Spring事务传播行为"><a href="#Spring事务传播行为" class="headerlink" title="Spring事务传播行为"></a>Spring事务传播行为</h2><table>
+<thead>
+<tr>
+<th>事务传播行为类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PROPAGATION_REQUIRED</td>
+<td>如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。Spring中默认为PROPAGATION_REQUIRED。</td>
+</tr>
+<tr>
+<td>PROPAGATION_REQUIRES_NEW</td>
+<td>新建事务，如果当前存在事务，把当前事务挂起。</td>
+</tr>
+<tr>
+<td>PROPAGATION_SUPPORTS</td>
+<td>支持当前事务，如果当前没有事务，就以非事务方式执行。</td>
+</tr>
+<tr>
+<td>PROPAGATION_MANDATORY</td>
+<td>使用当前的事务，如果当前没有事务，就抛出异常。</td>
+</tr>
+<tr>
+<td>PROPAGATION_NOT_SUPPORTED</td>
+<td>以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</td>
+</tr>
+<tr>
+<td>PROPAGATION_NEVER</td>
+<td>以非事务方式执行，如果当前存在事务，则抛出异常。</td>
+</tr>
+<tr>
+<td>PROPAGATION_NESTED</td>
+<td>如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与PROPAGATION_REQUIRED类似的操作。</td>
+</tr>
+</tbody></table>
+<h2 id="Spring事务隔离级别"><a href="#Spring事务隔离级别" class="headerlink" title="Spring事务隔离级别"></a>Spring事务隔离级别</h2><table>
+<thead>
+<tr>
+<th>隔离级别类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ISOLATION_DEFAULT</td>
+<td>使用后端数据库默认的隔离级别。Mysql 默认采用的 REPEATABLE_READ隔离级别 Oracle 默认采用的 READ_COMMITTED隔离级别</td>
+</tr>
+<tr>
+<td>ISOLATION_READ_UNCOMMITTED</td>
+<td>允许读取尚未提交的更改。可能导致脏读、幻影读或不可重复读。</td>
+</tr>
+<tr>
+<td>ISOLATION_READ_COMMITTED</td>
+<td>允许从已经提交的并发事务读取。可防止脏读，但幻影读和不可重复读仍可能会发生。</td>
+</tr>
+<tr>
+<td>ISOLATION_REPEATABLE_READ</td>
+<td>对相同字段的多次读取的结果是一致的，除非数据被当前事务本身改变。可防止脏读和不可重复读，但幻影读仍可能发生。</td>
+</tr>
+<tr>
+<td>ISOLATION_SERIALIZABLE</td>
+<td>完全服从ACID的隔离级别，确保不发生脏读、不可重复读和幻影读。这在所有隔离级别中也是最慢的，因为它通常是通过完全锁定当前事务所涉及的数据表来完成的。</td>
+</tr>
+</tbody></table>
+<p><strong>脏读：</strong>一个事务读取了被另一个事务改写但尚未提交的数据时。如果这些改变在稍后被回滚了，那么第一个事务读取的数据就会是无效的。</p>
+<p><strong>不可重复读：</strong>一个事务执行相同的查询两次或两次以上，但每次查询结果都不相同时。这通常是由于另一个并发事务在两次查询之间更新了数据。</p>
+<p><strong>幻读：</strong>当一个事务（1）读取几行记录后，另一个并发事务（2）插入了一些记录并提交，事务（1）再次查询，可以看到事务（2）添加的额外记录。</p>
+<h2 id="什么是-Spring-框架"><a href="#什么是-Spring-框架" class="headerlink" title="什么是 Spring 框架?"></a>什么是 Spring 框架?</h2><p>​    我们一般说 Spring 框架指的都是 Spring Framework，它是很多模块的集合，使用这些模块可以很方便地协助我们进行开发。这些模块是：核心容器、数据访问/集成,、Web、AOP（面向切面编程）、工具、消息和测试模块。比如：Core Container 中的 Core 组件是Spring 所有组件的核心，Beans 组件和 Context 组件是实现IOC和依赖注入的基础，AOP组件用来实现面向切面编程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-04-29%E4%B8%8A%E5%8D%889.41.07.png" alt=""></p>
+<h2 id="列举一些重要的Spring模块？"><a href="#列举一些重要的Spring模块？" class="headerlink" title="列举一些重要的Spring模块？"></a>列举一些重要的Spring模块？</h2><ul>
+<li><p><strong>Spring Core：</strong> 基础,可以说 Spring 其他所有的功能都需要依赖于该类库。主要提供 IOC 依赖注入功能。</p>
+</li>
+<li><p>*<em>Spring  Aspects *</em> ：该模块为与AspectJ的集成提供支持。</p>
+</li>
+<li><p><strong>Spring AOP</strong> ：提供了面向方面的编程实现。</p>
+</li>
+<li><p><strong>Spring JDBC</strong> : Java数据库连接。</p>
+</li>
+<li><p><strong>Spring JMS</strong> ：Java消息服务。</p>
+</li>
+<li><p><strong>Spring ORM</strong> : 用于支持Hibernate等ORM工具。</p>
+</li>
+<li><p><strong>Spring Web</strong> : 为创建Web应用程序提供支持。</p>
+</li>
+<li><p><strong>Spring Test</strong> : 提供了对 JUnit 和 TestNG 测试的支持。</p>
+</li>
+</ul>
+<h2 id="谈谈自己对于-Spring-IoC-和-AOP-的理解"><a href="#谈谈自己对于-Spring-IoC-和-AOP-的理解" class="headerlink" title="谈谈自己对于 Spring IoC 和 AOP 的理解"></a>谈谈自己对于 Spring IoC 和 AOP 的理解</h2><p><strong>IoC</strong></p>
+<p>​    IoC（Inverse of Control:控制反转）是一种<strong>设计思想</strong>，就是 <strong>将原本在程序中手动创建对象的控制权，交由Spring容器来管理。</strong>  IoC 在其他语言中也有应用，并非 Spirng 特有。 <strong>IoC 容器是 Spring 用来实现 IoC 的载体，  IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。</strong></p>
+<p>​    将对象之间的相互依赖关系交给 IOC 容器来管理，并由 IOC 容器完成对象的注入。这样可以很大程度上简化应用的开发，把应用从复杂的依赖关系中解放出来。  <strong>IOC 容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件/注解即可，完全不用考虑对象是如何被创建出来的。</strong> 在实际项目中一个 Service 类可能有几百甚至上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把人逼疯。如果利用 IOC 的话，你只需要配置好，然后在需要的地方引用就行了，这大大增加了项目的可维护性且降低了开发难度。</p>
+<p><strong>AOP</strong></p>
+<p>​    AOP(Aspect-Oriented Programming:面向切面编程)能够将那些与业务无关，<strong>却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来</strong>，便于<strong>减少系统的重复代码</strong>，<strong>降低模块间的耦合度</strong>，并<strong>有利于未来的可拓展性和可维护性</strong>。</p>
+<p>​    <strong>Spring AOP就是基于动态代理的</strong>，如果要代理的对象，实现了某个接口，那么Spring AOP会使用<strong>JDK Proxy</strong>，去创建代理对象，而对于没有实现接口的对象，就无法使用 JDK Proxy 去进行代理了，这时候Spring AOP会使用<strong>Cglib</strong> ，这时候Spring AOP会使用 <strong>Cglib</strong> 生成一个被代理对象的子类来作为代理。</p>
+<p>​    此外，SpringAOP支持AspectJ表达式。</p>
+<h2 id="Spring-AOP-和-AspectJ-AOP-有什么区别？"><a href="#Spring-AOP-和-AspectJ-AOP-有什么区别？" class="headerlink" title="Spring AOP 和 AspectJ AOP 有什么区别？"></a>Spring AOP 和 AspectJ AOP 有什么区别？</h2><p>​    <strong>Spring AOP 属于运行时增强，而 AspectJ 是编译时增强。</strong> Spring AOP 基于代理(Proxying)，而 AspectJ 基于字节码操作(Bytecode Manipulation)。</p>
+<p>​    Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java 生态系统中最完整的 AOP 框架了。AspectJ 相比于 Spring AOP 功能更加强大，但是 Spring AOP 相对来说更简单。</p>
+<p>​    如果我们的切面比较少，那么两者性能差异不大。但是，当切面太多的话，最好选择 AspectJ ，它比Spring AOP 快很多。</p>
+<h2 id="Spring-中的单例-bean-的线程安全问题了解吗？"><a href="#Spring-中的单例-bean-的线程安全问题了解吗？" class="headerlink" title="Spring 中的单例 bean 的线程安全问题了解吗？"></a>Spring 中的单例 bean 的线程安全问题了解吗？</h2><p>​    大部分时候我们并没有在系统中使用多线程，所以很少有人会关注这个问题。单例 bean 存在线程问题，主要是因为当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题。</p>
+<p>​    常见的有两种解决办法：</p>
+<ol>
+<li>在Bean对象中尽量避免定义可变的成员变量（不太现实）。</li>
+<li>在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在 ThreadLocal 中（推荐的一种方式）。</li>
+</ol>
+<h2 id="Spring-中的-bean-生命周期？"><a href="#Spring-中的-bean-生命周期？" class="headerlink" title="Spring 中的 bean 生命周期？"></a>Spring 中的 bean 生命周期？</h2><ul>
+<li><p>Bean 容器找到配置文件中 Spring Bean 的定义。</p>
+</li>
+<li><p>Bean 容器利用 Java Reflection API 创建一个Bean的实例。</p>
+</li>
+<li><p>如果涉及到一些属性值 利用 <code>set()</code>方法设置一些属性值。</p>
+</li>
+<li><p>如果 Bean 实现了 <code>BeanNameAware</code> 接口，调用 <code>setBeanName()</code>方法，传入Bean的名字。</p>
+</li>
+<li><p>如果 Bean 实现了 <code>BeanClassLoaderAware</code> 接口，调用 <code>setBeanClassLoader()</code>方法，传入 <code>ClassLoader</code>对象的实例。</p>
+</li>
+<li><p>如果Bean实现了 <code>BeanFactoryAware</code> 接口，调用 <code>setBeanClassLoader()</code>方法，传入 <code>ClassLoade</code> r对象的实例。</p>
+</li>
+<li><p>与上面的类似，如果实现了其他 <code>*.Aware</code>接口，就调用相应的方法。</p>
+</li>
+<li><p>如果有和加载这个 Bean 的 Spring 容器相关的 <code>BeanPostProcessor</code> 对象，执行<code>postProcessBeforeInitialization()</code> 方法</p>
+</li>
+<li><p>如果Bean实现了<code>InitializingBean</code>接口，执行<code>afterPropertiesSet()</code>方法。</p>
+</li>
+<li><p>如果 Bean 在配置文件中的定义包含  init-method 属性，执行指定的方法。</p>
+</li>
+<li><p>如果有和加载这个 Bean的 Spring 容器相关的 <code>BeanPostProcessor</code> 对象，执行<code>postProcessAfterInitialization()</code> 方法</p>
+</li>
+<li><p>当要销毁 Bean 的时候，如果 Bean 实现了 <code>DisposableBean</code> 接口，执行 <code>destroy()</code> 方法。</p>
+</li>
+<li><p>当要销毁 Bean 的时候，如果 Bean 在配置文件中的定义包含 destroy-method 属性，执行指定的方法。</p>
+</li>
+</ul>
+<p><strong>图示：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-04-29%E4%B8%8A%E5%8D%8810.06.32.png" alt=""></p>
+<h2 id="说说自己对于-Spring-MVC-了解"><a href="#说说自己对于-Spring-MVC-了解" class="headerlink" title="说说自己对于 Spring MVC 了解?"></a>说说自己对于 Spring MVC 了解?</h2><p>​    MVC 是一种设计模式,Spring MVC 是一款很优秀的 MVC 框架。Spring MVC 可以帮助我们进行更简洁的Web层的开发，并且它天生与 Spring 框架集成。Spring MVC 下我们一般把后端项目分为 Service层（处理业务）、Dao层（数据库操作）、Entity层（实体类）、Controller层(控制层，返回数据给前台页面)。</p>
+<p><strong>原理图：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/%E6%88%AA%E5%B1%8F2020-04-29%E4%B8%8A%E5%8D%8810.17.47.png" alt=""></p>
+<ol>
+<li><p>客户端（浏览器）发送请求，直接请求到 <code>DispatcherServlet</code>。</p>
+</li>
+<li><p><code>DispatcherServlet</code> 根据请求信息调用 <code>HandlerMapping</code>，解析请求对应的 <code>Handler</code>。</p>
+</li>
+<li><p>解析到对应的 <code>Handler</code>（也就是我们平常说的 <code>Controller</code> 控制器）后，开始由 <code>HandlerAdapter</code> 适配器处理。</p>
+</li>
+<li><p><code>HandlerAdapter</code> 会根据 <code>Handler</code>来调用真正的处理器开处理请求，并处理相应的业务逻辑。</p>
+</li>
+<li><p>处理器处理完业务后，会返回一个 <code>ModelAndView</code> 对象，<code>Model</code> 是返回的数据对象，<code>View</code> 是个逻辑上的 <code>View</code>。</p>
+</li>
+<li><p><code>ViewResolver</code> 会根据逻辑 <code>View</code> 查找实际的 <code>View</code>。</p>
+</li>
+<li><p><code>DispaterServlet</code> 把返回的 <code>Model</code> 传给 <code>View</code>（视图渲染）。</p>
+</li>
+<li><p>把 <code>View</code> 返回给请求者（浏览器）</p>
+</li>
+</ol>
+<h2 id="Spring-框架中用到了哪些设计模式？"><a href="#Spring-框架中用到了哪些设计模式？" class="headerlink" title="Spring 框架中用到了哪些设计模式？"></a>Spring 框架中用到了哪些设计模式？</h2><ul>
+<li><p><strong>工厂设计模式</strong> : Spring使用工厂模式通过 <code>BeanFactory</code>、<code>ApplicationContext</code> 创建 bean 对象。</p>
+</li>
+<li><p><strong>代理设计模式</strong> : Spring AOP 功能的实现。</p>
+</li>
+<li><p><strong>单例设计模式</strong> : Spring 中的 Bean 默认都是单例的。</p>
+</li>
+<li><p><strong>模板方法模式</strong> : Spring 中 <code>jdbcTemplate</code>、<code>hibernateTemplate</code> 等以 Template 结尾的对数据库操作的类，它们就使用到了模板模式。</p>
+</li>
+<li><p><strong>包装器设计模式</strong> : 我们的项目需要连接多个数据库，而且不同的客户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源。</p>
+</li>
+<li><p><strong>观察者模式:</strong> Spring 事件驱动模型就是观察者模式很经典的一个应用。</p>
+</li>
+<li><p><strong>适配器模式</strong> :Spring AOP 的增强或通知(Advice)使用到了适配器模式、spring MVC 中也是用到了适配器模式适配<code>Controller</code>。</p>
+</li>
+<li><p>……</p>
+</li>
+</ul>
+<h2 id="Component-和-Bean-的区别是什么？"><a href="#Component-和-Bean-的区别是什么？" class="headerlink" title="@Component 和 @Bean 的区别是什么？"></a>@Component 和 @Bean 的区别是什么？</h2><ol>
+<li>作用对象不同: <code>@Component</code> 注解作用于类，而<code>@Bean</code>注解作用于方法。</li>
+<li><code>@Component</code>通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中（我们可以使用 <code>@ComponentScan</code> 注解定义要扫描的路径从中找出标识了需要装配的类自动装配到 Spring 的 bean 容器中）。<code>@Bean</code> 注解通常是我们在标有该注解的方法中定义产生这个 bean,<code>@Bean</code>告诉了Spring这是某个类的示例，当我需要用它的时候还给我。</li>
+<li><code>@Bean</code> 注解比 <code>Component</code> 注解的自定义性更强，而且很多地方我们只能通过 <code>@Bean</code> 注解来注册bean。比如当我们引用第三方库中的类需要装配到 <code>Spring</code>容器时，则只能通过 <code>@Bean</code>来实现。</li>
+</ol>
+<p><code>@Bean</code>注解使用示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TransferService <span class="title">transferService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TransferServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码相当于下面的 xml 配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transferService"</span> <span class="attr">class</span>=<span class="string">"com.acme.TransferServiceImpl"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>下面这个例子是通过 <code>@Component</code> 无法实现的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> OneService <span class="title">getService</span><span class="params">(status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> (status)  &#123;</span><br><span class="line">        when <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl1();</span><br><span class="line">        when <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl2();</span><br><span class="line">        when <span class="number">3</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="将一个类声明为Spring的-bean-的注解有哪些"><a href="#将一个类声明为Spring的-bean-的注解有哪些" class="headerlink" title="将一个类声明为Spring的 bean 的注解有哪些?"></a>将一个类声明为Spring的 bean 的注解有哪些?</h2><p>我们一般使用 <code>@Autowired</code> 注解自动装配 bean，要想把类标识成可用于 <code>@Autowired</code> 注解自动装配的 bean 的类,采用以下注解可实现：</p>
+<ul>
+<li><code>@Component</code> ：通用的注解，可标注任意类为 <code>Spring</code> 组件。如果一个Bean不知道属于拿个层，可以使用<code>@Component</code> 注解标注。</li>
+<li><code>@Repository</code> : 对应持久层即 Dao 层，主要用于数据库相关操作。</li>
+<li><code>@Service</code> : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao层。</li>
+<li><code>@Controller</code> : 对应 Spring MVC 控制层，主要用户接受用户请求并调用 Service 层返回数据给前端页面。</li>
+</ul>
+<h2 id="Spring-管理事务的方式有几种？"><a href="#Spring-管理事务的方式有几种？" class="headerlink" title="Spring 管理事务的方式有几种？"></a>Spring 管理事务的方式有几种？</h2><ol>
+<li>编程式事务，在代码中硬编码。(不推荐使用)</li>
+<li>声明式事务，在配置文件中配置（推荐使用）</li>
+</ol>
+<p><strong>声明式事务又分为两种：</strong></p>
+<ol>
+<li>基于XML的声明式事务</li>
+<li>基于注解的声明式事务</li>
+</ol>
+
+          
+            <br>
+            
+              
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://qianxiaoxinrou.github.io/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/>https://qianxiaoxinrou.github.io/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/wiki_volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+            
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-30T07:40:52+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 30, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Spring%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Spring面试</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://qianxiaoxinrou.github.io/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/&title=Spring面试题 - Hexo&summary=总结常见Spring面试题"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://qianxiaoxinrou.github.io/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/&title=Spring面试题 - Hexo&summary=总结常见Spring面试题"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://qianxiaoxinrou.github.io/2020/04/29/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/&title=Spring面试题 - Hexo&summary=总结常见Spring面试题"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>3.3k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>11 min</p>
+    </a>
+  </div>
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/04/29/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/'>
+                <p class='title'>MyBatis面试题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>总结常见MyBatis面试题
+
+
+实体对象与数据库字段名不一致，怎么办？
+sql语句中使用别名
+MyBatis开启驼峰命名规则
+在映射文件中自定义ResultMap来映射字段名和实体类属性名的一...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Spring面试题',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring中Bean作用域？"><span class="toc-text">Spring中Bean作用域？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring事务传播行为"><span class="toc-text">Spring事务传播行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring事务隔离级别"><span class="toc-text">Spring事务隔离级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-Spring-框架"><span class="toc-text">什么是 Spring 框架?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列举一些重要的Spring模块？"><span class="toc-text">列举一些重要的Spring模块？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#谈谈自己对于-Spring-IoC-和-AOP-的理解"><span class="toc-text">谈谈自己对于 Spring IoC 和 AOP 的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-AOP-和-AspectJ-AOP-有什么区别？"><span class="toc-text">Spring AOP 和 AspectJ AOP 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-中的单例-bean-的线程安全问题了解吗？"><span class="toc-text">Spring 中的单例 bean 的线程安全问题了解吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-中的-bean-生命周期？"><span class="toc-text">Spring 中的 bean 生命周期？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#说说自己对于-Spring-MVC-了解"><span class="toc-text">说说自己对于 Spring MVC 了解?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-框架中用到了哪些设计模式？"><span class="toc-text">Spring 框架中用到了哪些设计模式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component-和-Bean-的区别是什么？"><span class="toc-text">@Component 和 @Bean 的区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将一个类声明为Spring的-bean-的注解有哪些"><span class="toc-text">将一个类声明为Spring的 bean 的注解有哪些?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-管理事务的方式有几种？"><span class="toc-text">Spring 管理事务的方式有几种？</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:me@xaoxuu.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/xaoxuu"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        as theme, total visits
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          times
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://xaoxuu.com" target="_blank" rel="noopener">Copyright © 2017-2020 Mr. X</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.4/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
