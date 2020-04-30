@@ -16,12 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>Java基础面试题总结 | 持续更新~~~ - Hexo</title>
+    <title>Java基础面试题总结 - Hexo</title>
   
-    <meta name="keywords" content="Java,面试">
+    <meta name="keywords" content="Java面试,Java">
   
   
-    <meta name="description" content="牛客网Java刷题总结">
+    <meta name="description" content="总结了自己刷题过程中和网上常见的面试题">
   
 
   <!-- feed -->
@@ -347,8 +347,8 @@
           
   
     <h1 class="title">
-      <a href="/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20%7C%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/">
-        Java基础面试题总结 | 持续更新~~~
+      <a href="/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/">
+        Java基础面试题总结
       </a>
     </h1>
   
@@ -403,7 +403,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>11.3k words</p>
+      <p>11k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -428,10 +428,10 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <p>牛客网Java刷题总结</p>
+          <p>总结了自己刷题过程中和网上常见的面试题</p>
 <a id="more"></a>
 
-<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="i-和-i区别"><a href="#i-和-i区别" class="headerlink" title="i++和++i区别"></a>i++和++i区别</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    i = i++;</span><br><span class="line">    <span class="keyword">int</span> j = i++;</span><br><span class="line">    <span class="keyword">int</span> k = i+ ++i * i++;</span><br><span class="line">    System.out.println(i);   </span><br><span class="line">    System.out.println(j);</span><br><span class="line">    System.out.println(k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="i-和-i"><a href="#i-和-i" class="headerlink" title="i++和++i"></a>i++和++i</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    i = i++;</span><br><span class="line">    <span class="keyword">int</span> j = i++;</span><br><span class="line">    <span class="keyword">int</span> k = i+ ++i * i++;</span><br><span class="line">    System.out.println(i);   </span><br><span class="line">    System.out.println(j);</span><br><span class="line">    System.out.println(k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1</span><br><span class="line">11</span><br></pre></td></tr></table></figure>
@@ -457,7 +457,7 @@
 <p>操作数栈弹出两个元素（3，3），进行乘法运算，结果为9，并压入操作数栈</p>
 <p>操作数栈弹出两个元素（9，2），进行加法运算，结果为11，并压入操作数栈</p>
 <p>操作数栈弹出一个元素（11），赋值给<code>k</code></p>
-<h3 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h3><p>Father类</p>
+<h2 id="类初始化"><a href="#类初始化" class="headerlink" title="类初始化"></a>类初始化</h2><p>Father类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> i = method();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> j = test();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span>  &#123;</span><br><span class="line">        System.out.print(<span class="string">"(1)"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Father() &#123;</span><br><span class="line">        System.out.print(<span class="string">"(2)"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Father(<span class="keyword">int</span> i) &#123;</span><br><span class="line">        System.out.print(<span class="string">"(2-1)"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.print(<span class="string">"(3)"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.print(<span class="string">"(4)"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.print(<span class="string">"(5)"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Son类</p>
@@ -473,7 +473,7 @@
 <p><strong>实例初始化</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.执行&lt;init&gt;方法</span><br><span class="line">  非静态变量赋值、执行非静态代码块和构造方法</span><br><span class="line">  按照自上而下的顺序对非静态变量赋值、执行非静态代码块，最后执行构造方法</span><br><span class="line">  子类在执行&lt;init&gt;之前会执行父类的&lt;init&gt;，父类构造方法由子类super()所决定，默认为无参构造</span><br><span class="line">  每次创建都会执行</span><br><span class="line"></span><br><span class="line">2.注意字类的重写方法（多态性）</span><br></pre></td></tr></table></figure>
 
-<h3 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h3><ul>
+<h2 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h2><ul>
 <li>参数列表必须完全与被重写方法的相同；</li>
 <li>返回类型必须完全与被重写方法的返回类型相同；</li>
 <li>访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为public，那么在子类中重写该方法就不能声明为protected。</li>
@@ -1024,6 +1024,7 @@
 <blockquote>
 <p><strong>注意</strong>：Java中非静态内部类对象的创建要依赖其外部类对象，上面的面试题中foo和main方法都是静态方法，静态方法中没有this，也就是说没有所谓的外部类对象，因此无法创建内部类对象，如果要在静态方法中创建内部类对象，可以这样做：new Outer().new Inner();</p>
 </blockquote>
+<h2 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h2><p><img src="https://cdn.jsdelivr.net/gh/qianxiaoxinrou/assets@master/img/327715682_1562312226456_ACED241801E307EE7A39612F85A94EBF.png" alt=""></p>
 <h2 id="jvm"><a href="#jvm" class="headerlink" title="jvm"></a>jvm</h2><h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><p>将内存按8:1:1分成一块Eden和两小块Survivor区，每次将Eden和Survivor中存活的对象复制到另一块空闲的Survivor中。这三块区域并不是堆的全部，而是构成了<strong>新生代</strong>。</p>
 <p>如果回收时，空闲的那一小块Survivor不够用了怎么办？这就是<strong>老年代</strong>的用处。当不够用时，这些对象将直接通过<strong>分配担保</strong>机制进入老年代。那么老年代也使用标记-复制策略吧？当然不行！老年代中的对象可不像新生代中的，每次回收都会清除掉大部分。如果贸然采用复制的策略，老年代的回收效率可想而知。</p>
 <h3 id="运行时常量池"><a href="#运行时常量池" class="headerlink" title="运行时常量池"></a>运行时常量池</h3><p>在JDK1.8之前<strong>运行时常量池</strong>被放在方法区,属于线程共享,JDK1.8之后,元空间取代了方法区,<strong>运行时常量池</strong>被也被放在元空间中,<strong>运行时常池</strong> 主要存放, class文件元信息描述,编译后的代码，引用类型数据，类文件常量池。所谓的运行时常量池其实就是将编译后的类信息放入运行时的一个区域中，用来动态获取类信息。<strong>运行时常量池</strong>是在类加载完成之后，将每个class常量池中的符号引用值转存到<strong>运行时常量池</strong>中，也就是说，每个class都有一个<strong>运行时常量池</strong>，类在解析之后，将符号引用替换成直接引用，与全局常量池中的引用值保持一致。</p>
@@ -1074,16 +1075,6 @@
 </ol>
 <p>forward：高。</p>
 <p>redirect：低。</p>
-<h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h2><h3 id="SpringMVC中文乱码"><a href="#SpringMVC中文乱码" class="headerlink" title="SpringMVC中文乱码"></a>SpringMVC中文乱码</h3><h4 id="post乱码"><a href="#post乱码" class="headerlink" title="post乱码"></a>post乱码</h4><p>配置<code>CharacterEncodingFilter</code>，将<code>encoding</code>属性设置为UTF-8。可以修改<code>forceEncoding</code>属性，修改响应的编码。</p>
-<h4 id="get乱码"><a href="#get乱码" class="headerlink" title="get乱码"></a>get乱码</h4><p>修改<code>tomcat</code>配置文件中<code>server.xml</code>，在<code>Connector</code>标签添加<code>URIEncoding=&quot;UTF-8&quot;</code></p>
-<h2 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架</h2><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-c: 建立压缩档案</span><br><span class="line">-x：解压</span><br><span class="line">-t：查看内容</span><br><span class="line">-r：向压缩归档文件末尾追加文件</span><br><span class="line">-u：更新原压缩包中的文件</span><br></pre></td></tr></table></figure>
-
-<p>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-z：有gzip属性的</span><br><span class="line">-j：有bz2属性的</span><br><span class="line">-Z：有compress属性的</span><br><span class="line">-v：显示所有过程</span><br><span class="line">-O：将文件解开到标准输出</span><br></pre></td></tr></table></figure>
-
-<p>下面的参数-f是必须的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</span><br></pre></td></tr></table></figure>
-
 
           
             <br>
@@ -1120,7 +1111,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20|%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/>https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20|%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</a></p>
+            <p>本文永久链接是：<a href=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/>https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/</a></p>
           
         
       </blockquote>
@@ -1170,7 +1161,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-30T07:01:32+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-30T09:52:26+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 30, 2020</p>
@@ -1182,7 +1173,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>面试</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java面试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
 
 
         
@@ -1200,7 +1191,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20|%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/&title=Java基础面试题总结 | 持续更新~~~ - Hexo&summary=牛客网Java刷题总结"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=Java基础面试题总结 - Hexo&summary=总结了自己刷题过程中和网上常见的面试题"
           
           >
           
@@ -1212,7 +1203,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20|%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/&title=Java基础面试题总结 | 持续更新~~~ - Hexo&summary=牛客网Java刷题总结"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=Java基础面试题总结 - Hexo&summary=总结了自己刷题过程中和网上常见的面试题"
           
           >
           
@@ -1224,7 +1215,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93%20|%20%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/&title=Java基础面试题总结 | 持续更新~~~ - Hexo&summary=牛客网Java刷题总结"
+          href="http://service.weibo.com/share/share.php?url=https://qianxiaoxinrou.github.io/2020/04/19/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/&title=Java基础面试题总结 - Hexo&summary=总结了自己刷题过程中和网上常见的面试题"
           
           >
           
@@ -1245,7 +1236,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>11.3k words</p>
+      <p>11k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -1266,15 +1257,15 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/04/29/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>MyBatis面试题</p>
-                <p class='content'>总结常见MyBatis面试题
+              <a class='prev' href='/2020/04/29/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>MyBatis面试题总结</p>
+                <p class='content'>总结了自己刷题过程中和网上常见的面试题
 
 
 实体对象与数据库字段名不一致，怎么办？
 sql语句中使用别名
 MyBatis开启驼峰命名规则
-在映射文件中自定义ResultMap来映射字段名和实体类属性名的一...</p>
+在映射文件中自定义ResultMap来映射字段名和实体类...</p>
               </a>
             
             
@@ -1312,7 +1303,7 @@ MyBatis开启驼峰命名规则
 
   <script>
     window.subData = {
-      title: 'Java基础面试题总结 | 持续更新~~~',
+      title: 'Java基础面试题总结',
       tools: true
     }
   </script>
@@ -1338,7 +1329,7 @@ MyBatis开启驼峰命名规则
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基础"><span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i-和-i区别"><span class="toc-text">i++和++i区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化顺序"><span class="toc-text">初始化顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法重写"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法传值"><span class="toc-text">方法传值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量类型、作用域和初始化"><span class="toc-text">变量类型、作用域和初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举相关"><span class="toc-text">枚举相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法重写-1"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ThreadLocal"><span class="toc-text">ThreadLocal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件名与类名"><span class="toc-text">文件名与类名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串拼接"><span class="toc-text">字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行异常和非运行异常"><span class="toc-text">运行异常和非运行异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原码、反码、补码"><span class="toc-text">原码、反码、补码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型PECS原则"><span class="toc-text">泛型PECS原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最终类"><span class="toc-text">最终类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字-keywords"><span class="toc-text">关键字 keywords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造方法"><span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a的b次幂"><span class="toc-text">a的b次幂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getClass"><span class="toc-text">getClass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口和抽象类"><span class="toc-text">接口和抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程停止方法"><span class="toc-text">线程停止方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一维数组"><span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法重载"><span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类之间关系"><span class="toc-text">类之间关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二维数组"><span class="toc-text">二维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符编码和国际化"><span class="toc-text">字符编码和国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚函数和纯虚函数"><span class="toc-text">虚函数和纯虚函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integer"><span class="toc-text">Integer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Thread-join"><span class="toc-text">Thread.join()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见的锁"><span class="toc-text">常见的锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符"><span class="toc-text">操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hashCode和equals"><span class="toc-text">hashCode和equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch-语句"><span class="toc-text">switch 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符常量"><span class="toc-text">字符常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反射"><span class="toc-text">反射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导致InterruptedException异常"><span class="toc-text">导致InterruptedException异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#汉字长度"><span class="toc-text">汉字长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类加载器"><span class="toc-text">类加载器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动装箱"><span class="toc-text">自动装箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jdk命令"><span class="toc-text">jdk命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static属性和方法"><span class="toc-text">static属性和方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存根类"><span class="toc-text">存根类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static与重载"><span class="toc-text">static与重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符优先级"><span class="toc-text">运算符优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java体系结构"><span class="toc-text">Java体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java不可被继承的类"><span class="toc-text">Java不可被继承的类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-intern"><span class="toc-text">String.intern()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四舍五入"><span class="toc-text">四舍五入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch作用选择"><span class="toc-text">switch作用选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#位运算提高计算性能"><span class="toc-text">位运算提高计算性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#描述一下JVM加载class文件的原理机制？"><span class="toc-text">描述一下JVM加载class文件的原理机制？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态嵌套类（Static-Nested-Class）和内部类（Inner-Class）的不同？"><span class="toc-text">静态嵌套类（Static Nested Class）和内部类（Inner Class）的不同？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jvm"><span class="toc-text">jvm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#复制算法"><span class="toc-text">复制算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行时常量池"><span class="toc-text">运行时常量池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMS的GC过程"><span class="toc-text">CMS的GC过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数配置"><span class="toc-text">参数配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Web"><span class="toc-text">Java Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cookie的获取方式"><span class="toc-text">Cookie的获取方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#request-属性参数"><span class="toc-text">request 属性参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HttpSessionAttributeListener"><span class="toc-text">HttpSessionAttributeListener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forward和redirect区别"><span class="toc-text">forward和redirect区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring框架"><span class="toc-text">Spring框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringMVC中文乱码"><span class="toc-text">SpringMVC中文乱码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#post乱码"><span class="toc-text">post乱码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#get乱码"><span class="toc-text">get乱码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyBatis框架"><span class="toc-text">MyBatis框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar命令"><span class="toc-text">tar命令</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#i-和-i"><span class="toc-text">i++和++i</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类初始化"><span class="toc-text">类初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法重写"><span class="toc-text">方法重写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法传值"><span class="toc-text">方法传值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量类型、作用域和初始化"><span class="toc-text">变量类型、作用域和初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#枚举相关"><span class="toc-text">枚举相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法重写-1"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ThreadLocal"><span class="toc-text">ThreadLocal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件名与类名"><span class="toc-text">文件名与类名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串拼接"><span class="toc-text">字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行异常和非运行异常"><span class="toc-text">运行异常和非运行异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原码、反码、补码"><span class="toc-text">原码、反码、补码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型PECS原则"><span class="toc-text">泛型PECS原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最终类"><span class="toc-text">最终类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字-keywords"><span class="toc-text">关键字 keywords</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造方法"><span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a的b次幂"><span class="toc-text">a的b次幂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getClass"><span class="toc-text">getClass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口和抽象类"><span class="toc-text">接口和抽象类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程停止方法"><span class="toc-text">线程停止方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一维数组"><span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法重载"><span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类之间关系"><span class="toc-text">类之间关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二维数组"><span class="toc-text">二维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符编码和国际化"><span class="toc-text">字符编码和国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚函数和纯虚函数"><span class="toc-text">虚函数和纯虚函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integer"><span class="toc-text">Integer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Thread-join"><span class="toc-text">Thread.join()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见的锁"><span class="toc-text">常见的锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包装类"><span class="toc-text">包装类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符"><span class="toc-text">操作符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hashCode和equals"><span class="toc-text">hashCode和equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch-语句"><span class="toc-text">switch 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符常量"><span class="toc-text">字符常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反射"><span class="toc-text">反射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导致InterruptedException异常"><span class="toc-text">导致InterruptedException异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#汉字长度"><span class="toc-text">汉字长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类加载器"><span class="toc-text">类加载器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动装箱"><span class="toc-text">自动装箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jdk命令"><span class="toc-text">jdk命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static属性和方法"><span class="toc-text">static属性和方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存根类"><span class="toc-text">存根类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static与重载"><span class="toc-text">static与重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符优先级"><span class="toc-text">运算符优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java体系结构"><span class="toc-text">Java体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java不可被继承的类"><span class="toc-text">Java不可被继承的类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-intern"><span class="toc-text">String.intern()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四舍五入"><span class="toc-text">四舍五入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch作用选择"><span class="toc-text">switch作用选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#位运算提高计算性能"><span class="toc-text">位运算提高计算性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#描述一下JVM加载class文件的原理机制？"><span class="toc-text">描述一下JVM加载class文件的原理机制？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态嵌套类（Static-Nested-Class）和内部类（Inner-Class）的不同？"><span class="toc-text">静态嵌套类（Static Nested Class）和内部类（Inner Class）的不同？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程状态"><span class="toc-text">线程状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jvm"><span class="toc-text">jvm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#复制算法"><span class="toc-text">复制算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行时常量池"><span class="toc-text">运行时常量池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMS的GC过程"><span class="toc-text">CMS的GC过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数配置"><span class="toc-text">参数配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Web"><span class="toc-text">Java Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cookie的获取方式"><span class="toc-text">Cookie的获取方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#request-属性参数"><span class="toc-text">request 属性参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HttpSessionAttributeListener"><span class="toc-text">HttpSessionAttributeListener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#forward和redirect区别"><span class="toc-text">forward和redirect区别</span></a></li></ol></li></ol>
     </div>
   </section>
 
